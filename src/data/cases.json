@@ -1,0 +1,1074 @@
+[
+  {
+    "id": "bartz-v-anthropic",
+    "name": "Bartz v. Anthropic",
+    "plaintiffs": [
+      "Bartz",
+      "Others"
+    ],
+    "defendants": [
+      "Anthropic"
+    ],
+    "court": "ND California",
+    "judge": "Judge Alsup",
+    "status": "Settled",
+    "summary": "Class action settlement preliminarily approved. Payout approx $3,100 per work.",
+    "links": [
+      {
+        "title": "Judge Alsup Opinion",
+        "url": "https://chatgptiseatingtheworld.com/wp-content/uploads/2025/10/Judge-Alsup-Mem-Op-on-Preliminary-Approval-of-Class-Action-Settlement-Oct-17-2025.pdf"
+      }
+    ]
+  },
+  {
+    "id": "kadrey-v-meta",
+    "name": "Kadrey v. Meta",
+    "plaintiffs": [
+      "Richard Kadrey",
+      "Sarah Silverman",
+      "Christopher Golden"
+    ],
+    "defendants": [
+      "Meta Platforms, Inc."
+    ],
+    "court": "ND California",
+    "judge": "Judge Chhabria",
+    "status": "Active",
+    "summary": "Alleging copyright infringement for training LLaMA on pirated books.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/67569326/kadrey-v-meta-platforms-inc/"
+      }
+    ]
+  },
+  {
+    "id": "chabon-v-meta",
+    "name": "Chabon v. Meta",
+    "plaintiffs": [
+      "Michael Chabon",
+      "Others"
+    ],
+    "defendants": [
+      "Meta Platforms, Inc."
+    ],
+    "court": "ND California",
+    "judge": "Judge Chhabria",
+    "status": "Active",
+    "summary": "Consolidated with Kadrey v. Meta.",
+    "links": []
+  },
+  {
+    "id": "tremblay-v-openai",
+    "name": "In re OpenAI ChatGPT Litigation (Tremblay, Silverman, Chabon)",
+    "plaintiffs": [
+      "Paul Tremblay",
+      "Sarah Silverman",
+      "Michael Chabon",
+      "Others"
+    ],
+    "defendants": [
+      "OpenAI"
+    ],
+    "court": "ND California",
+    "judge": "Judge Araceli Martínez-Olguín",
+    "status": "Active",
+    "summary": "Class action alleging copyright infringement by ChatGPT.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/67538258/tremblay-v-openai-inc/"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024-02-12",
+        "event": "Motion to Dismiss Ruling",
+        "description": "Judge Araceli Martínez-Olguín dismisses most claims (vicarious infringement, DMCA, negligence) but allows direct copyright infringement claim to proceed."
+      },
+      {
+        "date": "2023-06-28",
+        "event": "Complaint Filed",
+        "description": "Paul Tremblay and Mona Awad file class action lawsuit against OpenAI alleging copyright infringement."
+      }
+    ]
+  },
+  {
+    "id": "nazemian-v-nvidia",
+    "name": "Nazemian v. NVIDIA Corp.",
+    "plaintiffs": [
+      "Abdi Nazemian",
+      "Others"
+    ],
+    "defendants": [
+      "NVIDIA Corp."
+    ],
+    "court": "ND California",
+    "judge": "Judge Tigar",
+    "status": "Active",
+    "summary": "Alleging use of Books3 dataset to train NeMo Megatron models.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/68325563/nazemian-v-nvidia-corporation/"
+      }
+    ]
+  },
+  {
+    "id": "dubus-v-nvidia",
+    "name": "Dubus v. NVIDIA Corp.",
+    "plaintiffs": [
+      "Dubus"
+    ],
+    "defendants": [
+      "NVIDIA Corp."
+    ],
+    "court": "ND California",
+    "judge": "Judge Tigar",
+    "status": "Active",
+    "summary": "Related to Nazemian case.",
+    "links": []
+  },
+  {
+    "id": "onan-v-databricks",
+    "name": "In re Mosaic LLM (O’Nan; Makkai)",
+    "plaintiffs": [
+      "O’Nan",
+      "Makkai"
+    ],
+    "defendants": [
+      "Databricks",
+      "Mosaic ML"
+    ],
+    "court": "ND California",
+    "judge": "Judge Breyer",
+    "status": "Active",
+    "summary": "Copyright infringement allegations regarding MosaicML models.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/68325564/onan-v-databricks-inc/"
+      }
+    ]
+  },
+  {
+    "id": "hendrix-v-apple",
+    "name": "Hendrix v. Apple",
+    "plaintiffs": [
+      "Hendrix"
+    ],
+    "defendants": [
+      "Apple"
+    ],
+    "court": "ND California",
+    "judge": "Judge Gonzalez Rogers",
+    "status": "Active",
+    "summary": "Book authors suing Apple.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/71279155/hendrix-v-apple-inc/"
+      }
+    ]
+  },
+  {
+    "id": "martinez-conde-v-apple",
+    "name": "Martinez-Conde v. Apple",
+    "plaintiffs": [
+      "Martinez-Conde"
+    ],
+    "defendants": [
+      "Apple"
+    ],
+    "court": "ND California",
+    "judge": "Judge Gonzalez Rogers",
+    "status": "Active",
+    "summary": "Book authors suing Apple.",
+    "links": [
+      {
+        "title": "Complaint",
+        "url": "https://chatgptiseatingtheworld.com/2025/10/10/martinez-condez-represented-by-joseph-saveri-law-firm-sues-apple-for-copyright-claim-suits-hit-52/"
+      }
+    ]
+  },
+  {
+    "id": "alexander-v-apple",
+    "name": "Alexander v. Apple",
+    "plaintiffs": [
+      "Alexander"
+    ],
+    "defendants": [
+      "Apple",
+      "Craig Federighi",
+      "John Giannandrea"
+    ],
+    "court": "ND California",
+    "judge": "Judge Gonzalez Rogers",
+    "status": "Active",
+    "summary": "Book authors suing Apple and executives.",
+    "links": [
+      {
+        "title": "Complaint",
+        "url": "https://chatgptiseatingtheworld.com/wp-content/uploads/2025/10/Alexander-v.-Apple-Inc.-et-al-COMPLAINT-Oct-22-2025.pdf"
+      }
+    ]
+  },
+  {
+    "id": "concord-music-v-anthropic",
+    "name": "Concord Music v. Anthropic",
+    "plaintiffs": [
+      "Concord Music Group",
+      "Others"
+    ],
+    "defendants": [
+      "Anthropic"
+    ],
+    "court": "ND California",
+    "judge": "Judge Lee",
+    "status": "Active",
+    "summary": "Music publishers suing over lyrics in Claude.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/68889092/concord-music-group-inc-v-anthropic-pbc/"
+      }
+    ]
+  },
+  {
+    "id": "doe-v-github",
+    "name": "Doe 1 v. Github, Microsoft, OpenAI",
+    "plaintiffs": [
+      "Doe 1",
+      "Others"
+    ],
+    "defendants": [
+      "Github",
+      "Microsoft",
+      "OpenAI"
+    ],
+    "court": "ND California",
+    "judge": "Judge Tigar",
+    "status": "Appeal 9th Cir.",
+    "summary": "Copilot litigation.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/69495342/doe-et-al-v-github-inc-et-al/"
+      }
+    ]
+  },
+  {
+    "id": "andersen-v-stability",
+    "name": "Sarah Andersen v. Stability AI, Deviant Art, Midjourney, Runway AI",
+    "plaintiffs": [
+      "Sarah Andersen",
+      "Kelly McKernan",
+      "Karla Ortiz"
+    ],
+    "defendants": [
+      "Stability AI",
+      "DeviantArt",
+      "Midjourney",
+      "Runway AI"
+    ],
+    "court": "ND California",
+    "judge": "Judge Orrick",
+    "status": "Active",
+    "summary": "Artists suing image generators.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/66732129/andersen-v-stability-ai-ltd/"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2024-08-12",
+        "event": "Amended Complaint Filed",
+        "description": "Plaintiffs file amended complaint adding new plaintiffs and refining allegations."
+      },
+      {
+        "date": "2023-10-30",
+        "event": "Motion to Dismiss Granted in Part",
+        "description": "Judge Orrick dismisses most claims with leave to amend, but allows direct infringement claim against Stability AI to proceed."
+      },
+      {
+        "date": "2023-01-13",
+        "event": "Complaint Filed",
+        "description": "Sarah Andersen, Kelly McKernan, and Karla Ortiz file class action lawsuit against Stability AI, Midjourney, and DeviantArt."
+      }
+    ]
+  },
+  {
+    "id": "google-gen-ai",
+    "name": "In re Google Gen. AI Ltgn. (Zhang, Leovy)",
+    "plaintiffs": [
+      "Zhang",
+      "Leovy",
+      "Others"
+    ],
+    "defendants": [
+      "Google"
+    ],
+    "court": "ND California",
+    "judge": "Judge Lee",
+    "status": "Active",
+    "summary": "Class action against Google's generative AI.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/67599029/l-v-alphabet-inc/"
+      }
+    ]
+  },
+  {
+    "id": "denial-v-openai-ndcal",
+    "name": "Denial v. OpenAI",
+    "plaintiffs": [
+      "Denial"
+    ],
+    "defendants": [
+      "OpenAI"
+    ],
+    "court": "ND California",
+    "judge": "Judge Chen",
+    "status": "Active",
+    "summary": "Copyright suit against OpenAI.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/70680442/denial-v-openai-inc/"
+      }
+    ]
+  },
+  {
+    "id": "strike-3-v-meta",
+    "name": "Strike 3 Holdings v. Meta",
+    "plaintiffs": [
+      "Strike 3 Holdings"
+    ],
+    "defendants": [
+      "Meta"
+    ],
+    "court": "ND California",
+    "judge": "Judge Lee",
+    "status": "Active",
+    "summary": "Copyright infringement regarding adult content.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/70899478/strike-3-holdings-llc-v-meta-platforms-inc/"
+      }
+    ]
+  },
+  {
+    "id": "getty-v-stability",
+    "name": "Getty Images v. Stability AI",
+    "plaintiffs": [
+      "Getty Images"
+    ],
+    "defendants": [
+      "Stability AI"
+    ],
+    "court": "ND California",
+    "judge": "Judge Thompson",
+    "status": "Active",
+    "summary": "Alleging Stability AI scraped Getty Images.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/71112094/getty-images-us-inc-v-stability-ai-ltd/"
+      }
+    ]
+  },
+  {
+    "id": "tanzer-v-salesforce",
+    "name": "Tanzer v. Salesforce",
+    "plaintiffs": [
+      "Tanzer"
+    ],
+    "defendants": [
+      "Salesforce"
+    ],
+    "court": "ND California",
+    "judge": "Judge Breyer",
+    "status": "Active",
+    "summary": "Copyright suit against Salesforce.",
+    "links": [
+      {
+        "title": "Complaint",
+        "url": "https://chatgptiseatingtheworld.com/wp-content/uploads/2025/10/Tanzer-v.-Salesforce-Class-Action-Complaint-Oct-15-2025.pdf"
+      }
+    ]
+  },
+  {
+    "id": "pierce-v-photobucket",
+    "name": "Pierce v. Photobucket",
+    "plaintiffs": [
+      "Pierce"
+    ],
+    "defendants": [
+      "Photobucket"
+    ],
+    "court": "D. Col.",
+    "judge": "Judge Brimmer",
+    "status": "Active",
+    "summary": "Copyright suit involving AI training data.",
+    "links": []
+  },
+  {
+    "id": "woulard-v-uncharted",
+    "name": "Woulard v. Unch. Labs",
+    "plaintiffs": [
+      "Woulard"
+    ],
+    "defendants": [
+      "Uncharted Labs (Udio)"
+    ],
+    "court": "ND Illinois",
+    "judge": "Judge Ellis",
+    "status": "Transfer",
+    "summary": "Musician suing Udio.",
+    "links": []
+  },
+  {
+    "id": "woulard-v-suno",
+    "name": "Woulard v. Suno",
+    "plaintiffs": [
+      "Woulard"
+    ],
+    "defendants": [
+      "Suno"
+    ],
+    "court": "ND Illinois",
+    "judge": "Judge Wood",
+    "status": "Active",
+    "summary": "Musician suing Suno.",
+    "links": []
+  },
+  {
+    "id": "umg-v-suno",
+    "name": "UMG Recordings v. Suno",
+    "plaintiffs": [
+      "UMG Recordings",
+      "Others"
+    ],
+    "defendants": [
+      "Suno"
+    ],
+    "court": "D. Mass.",
+    "judge": "Judge Saylor IV",
+    "status": "Active",
+    "summary": "Major record labels suing Suno.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/68878608/umg-recordings-inc-v-suno-inc/"
+      }
+    ]
+  },
+  {
+    "id": "justice-v-suno",
+    "name": "Justice v. Suno",
+    "plaintiffs": [
+      "Justice"
+    ],
+    "defendants": [
+      "Suno"
+    ],
+    "court": "D. Mass.",
+    "judge": "Judge Saylor IV",
+    "status": "Active",
+    "summary": "Copyright suit against Suno.",
+    "links": []
+  },
+  {
+    "id": "authors-guild-v-openai",
+    "name": "Authors Guild v. OpenAI",
+    "plaintiffs": [
+      "Authors Guild",
+      "George R.R. Martin",
+      "John Grisham",
+      "Others"
+    ],
+    "defendants": [
+      "OpenAI"
+    ],
+    "court": "SDNY",
+    "judge": "Judge Stein",
+    "status": "Active",
+    "summary": "Class action by authors.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/67810584/authors-guild-v-openai-inc/"
+      }
+    ]
+  },
+  {
+    "id": "nyt-v-openai",
+    "name": "New York Times v. OpenAI",
+    "plaintiffs": [
+      "New York Times"
+    ],
+    "defendants": [
+      "OpenAI",
+      "Microsoft"
+    ],
+    "court": "SDNY",
+    "judge": "Judge Stein",
+    "status": "Active",
+    "summary": "NYT suing for copyright infringement.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/68117049/the-new-york-times-company-v-microsoft-corporation/"
+      }
+    ]
+  },
+  {
+    "id": "daily-news-v-microsoft",
+    "name": "Daily News v. Microsoft",
+    "plaintiffs": [
+      "Daily News",
+      "Others"
+    ],
+    "defendants": [
+      "Microsoft",
+      "OpenAI"
+    ],
+    "court": "SDNY",
+    "judge": "Judge Stein",
+    "status": "Active",
+    "summary": "Newspapers suing Microsoft and OpenAI.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/68484432/daily-news-lp-v-microsoft-corporation/"
+      }
+    ]
+  },
+  {
+    "id": "cir-v-openai",
+    "name": "Center for Inv. Rep. v OpenAI",
+    "plaintiffs": [
+      "Center for Investigative Reporting"
+    ],
+    "defendants": [
+      "OpenAI"
+    ],
+    "court": "SDNY",
+    "judge": "Judge Stein",
+    "status": "Active",
+    "summary": "Non-profit newsroom suing OpenAI.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/68892274/the-center-for-investigative-reporting-inc-v-openai-inc/"
+      }
+    ]
+  },
+  {
+    "id": "raw-story-v-openai",
+    "name": "Raw Story v. OpenAI",
+    "plaintiffs": [
+      "Raw Story",
+      "AlterNet"
+    ],
+    "defendants": [
+      "OpenAI"
+    ],
+    "court": "SDNY",
+    "judge": "Judge McMahon",
+    "status": "Appeal 2d Cir.",
+    "summary": "Dismissed for lack of standing, now on appeal.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/70880280/in-re-openai-inc-copyright-infringement-litigation/"
+      }
+    ]
+  },
+  {
+    "id": "millette-v-openai-sdny",
+    "name": "Millette v. OpenAI",
+    "plaintiffs": [
+      "Millette"
+    ],
+    "defendants": [
+      "OpenAI"
+    ],
+    "court": "SDNY",
+    "judge": "Judge Stein",
+    "status": "Active",
+    "summary": "Transferred or related case.",
+    "links": []
+  },
+  {
+    "id": "ziff-davis-v-openai-sdny",
+    "name": "Ziff Davis v. OpenAI",
+    "plaintiffs": [
+      "Ziff Davis"
+    ],
+    "defendants": [
+      "OpenAI"
+    ],
+    "court": "SDNY",
+    "judge": "Judge Stein",
+    "status": "Active",
+    "summary": "Publisher of IGN, PCMag suing OpenAI.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/69942278/ziff-davis-inc-v-openai-inc/"
+      }
+    ]
+  },
+  {
+    "id": "intercept-v-openai",
+    "name": "Intercept v. OpenAI",
+    "plaintiffs": [
+      "The Intercept"
+    ],
+    "defendants": [
+      "OpenAI"
+    ],
+    "court": "SDNY",
+    "judge": "Judge Stein",
+    "status": "Active",
+    "summary": "News outlet suing OpenAI.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/68290804/the-intercept-media-inc-v-openai-inc/"
+      }
+    ]
+  },
+  {
+    "id": "bird-v-microsoft",
+    "name": "Bird v. Microsoft",
+    "plaintiffs": [
+      "Bird"
+    ],
+    "defendants": [
+      "Microsoft"
+    ],
+    "court": "SDNY",
+    "judge": "Judge Stein",
+    "status": "Active",
+    "summary": "Copyright suit.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/70626692/bird-v-microsoft-corporation/"
+      }
+    ]
+  },
+  {
+    "id": "huckabee-v-bloomberg",
+    "name": "Huckabee v. Bloomberg",
+    "plaintiffs": [
+      "Huckabee",
+      "Others"
+    ],
+    "defendants": [
+      "Bloomberg"
+    ],
+    "court": "SDNY",
+    "judge": "Judge Garnett",
+    "status": "Active",
+    "summary": "Authors suing Bloomberg for training on Books3.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "http://courtlistener.com/docket/67890942/huckabee-v-meta-platforms-inc/"
+      }
+    ]
+  },
+  {
+    "id": "dow-jones-v-perplexity",
+    "name": "Dow Jones v. Perplexity AI",
+    "plaintiffs": [
+      "Dow Jones",
+      "NY Post"
+    ],
+    "defendants": [
+      "Perplexity AI"
+    ],
+    "court": "SDNY",
+    "judge": "Judge Polk Failla",
+    "status": "Active",
+    "summary": "News Corp subsidiaries suing Perplexity.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/69280523/dow-jones-company-inc-v-perplexity-ai-inc/"
+      }
+    ]
+  },
+  {
+    "id": "encyclo-brit-v-perplexity",
+    "name": "Encyclo. Brit. v. Perplexity AI",
+    "plaintiffs": [
+      "Encyclopaedia Britannica"
+    ],
+    "defendants": [
+      "Perplexity AI"
+    ],
+    "court": "SDNY",
+    "judge": "Judge Rochon",
+    "status": "Active",
+    "summary": "Encyclopedia suing Perplexity.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/71313411/encyclopaedia-britannica-inc-v-perplexity-ai-inc/"
+      }
+    ]
+  },
+  {
+    "id": "reddit-v-serpapi",
+    "name": "Reddit v. SerpAPI, Perplexity",
+    "plaintiffs": [
+      "Reddit"
+    ],
+    "defendants": [
+      "SerpAPI",
+      "Perplexity"
+    ],
+    "court": "SDNY",
+    "judge": "Judge Engelmayer",
+    "status": "Active",
+    "summary": "Reddit suing for unauthorized scraping.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/71720563/reddit-inc-v-serpapi-llc/"
+      }
+    ]
+  },
+  {
+    "id": "advance-local-v-cohere",
+    "name": "Advance Loc. Media v. Cohere",
+    "plaintiffs": [
+      "Advance Local Media"
+    ],
+    "defendants": [
+      "Cohere"
+    ],
+    "court": "SDNY",
+    "judge": "Judge McMahon",
+    "status": "Active",
+    "summary": "Publisher suing Cohere.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/69636122/advance-local-media-llc-v-cohere-inc/"
+      }
+    ]
+  },
+  {
+    "id": "umg-v-uncharted",
+    "name": "UMG Recordings v. Unch. Labs",
+    "plaintiffs": [
+      "UMG Recordings"
+    ],
+    "defendants": [
+      "Uncharted Labs (Udio)"
+    ],
+    "court": "SDNY",
+    "judge": "Judge Hellerstein",
+    "status": "Active",
+    "summary": "Music labels suing Udio.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/68878697/umg-recordings-inc-v-uncharted-labs-inc/"
+      }
+    ]
+  },
+  {
+    "id": "justice-v-uncharted",
+    "name": "Justice v. Uncharted Labs",
+    "plaintiffs": [
+      "Justice"
+    ],
+    "defendants": [
+      "Uncharted Labs (Udio)"
+    ],
+    "court": "SDNY",
+    "judge": "Judge Garnett",
+    "status": "Active",
+    "summary": "Musician suing Udio.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/70549282/justice-v-uncharted-labs-inc/"
+      }
+    ]
+  },
+  {
+    "id": "lehrman-v-lovo",
+    "name": "Lehrman v. Lovo",
+    "plaintiffs": [
+      "Lehrman"
+    ],
+    "defendants": [
+      "Lovo"
+    ],
+    "court": "SDNY",
+    "judge": "Judge Oetken",
+    "status": "Active",
+    "summary": "Voice actor suing AI voice company.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/68535780/lehrman-v-lovo-inc/"
+      }
+    ]
+  },
+  {
+    "id": "alcon-v-tesla",
+    "name": "Alcon Ent. v. Tesla",
+    "plaintiffs": [
+      "Alcon Entertainment"
+    ],
+    "defendants": [
+      "Tesla",
+      "Warner Bros."
+    ],
+    "court": "CD California",
+    "judge": "Judge Wu",
+    "status": "Active",
+    "summary": "Blade Runner 2049 producer suing over AI imagery in Robotaxi event.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/69280385/alcon-entertainment-llc-v-tesla-inc/"
+      }
+    ]
+  },
+  {
+    "id": "disney-v-midjourney",
+    "name": "Disney v. Midjourney",
+    "plaintiffs": [
+      "Disney"
+    ],
+    "defendants": [
+      "Midjourney"
+    ],
+    "court": "CD California",
+    "judge": "Judge Kronstadt",
+    "status": "Active",
+    "summary": "Disney suing Midjourney.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/70513159/disney-enterprises-inc-v-midjourney-inc/"
+      }
+    ]
+  },
+  {
+    "id": "warner-bros-v-midjourney",
+    "name": "Warner Bros. v. Midjourney",
+    "plaintiffs": [
+      "Warner Bros."
+    ],
+    "defendants": [
+      "Midjourney"
+    ],
+    "court": "CD California",
+    "judge": "Judge Kronstadt",
+    "status": "Active",
+    "summary": "Warner Bros suing Midjourney.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/71271014/warner-bros-entertainment-inc-v-midjourney-inc/"
+      }
+    ]
+  },
+  {
+    "id": "disney-v-minimax",
+    "name": "Disney v. MiniMax",
+    "plaintiffs": [
+      "Disney"
+    ],
+    "defendants": [
+      "MiniMax"
+    ],
+    "court": "CD California",
+    "judge": "Judge Blumenfeld Jr.",
+    "status": "Active",
+    "summary": "Disney suing MiniMax.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/71357247/disney-enterprises-inc-v-minimax/"
+      }
+    ]
+  },
+  {
+    "id": "thomson-reuters-v-ross",
+    "name": "Thomson Reuters v. ROSS Int.",
+    "plaintiffs": [
+      "Thomson Reuters"
+    ],
+    "defendants": [
+      "ROSS Intelligence"
+    ],
+    "court": "Delaware",
+    "judge": "Judge Bibas",
+    "status": "Appeal 3d Cir.",
+    "summary": "Westlaw vs AI legal research tool.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/70622297/thomson-reuters-enterprise-centre-gmbh-v-ross-intelligence-inc/"
+      }
+    ]
+  },
+  {
+    "id": "vacker-v-eleven-labs",
+    "name": "Vacker v. Eleven Labs",
+    "plaintiffs": [
+      "Vacker"
+    ],
+    "defendants": [
+      "Eleven Labs"
+    ],
+    "court": "Delaware",
+    "judge": "Judge Andrews",
+    "status": "Settled",
+    "summary": "Voice actor suing Eleven Labs.",
+    "links": [
+      {
+        "title": "CourtListener",
+        "url": "https://www.courtlistener.com/docket/69111793/vacker-v-elevenlabs-inc/"
+      }
+    ]
+  },
+  {
+    "id": "ziff-davis-v-openai-del",
+    "name": "Ziff Davis v. OpenAI",
+    "plaintiffs": [
+      "Ziff Davis"
+    ],
+    "defendants": [
+      "OpenAI"
+    ],
+    "court": "Delaware",
+    "judge": "Chief Judge Connolly",
+    "status": "Active",
+    "summary": "Ziff Davis suing OpenAI in Delaware.",
+    "links": []
+  },
+  {
+    "id": "millette-v-google",
+    "name": "Millette v. Google",
+    "plaintiffs": [
+      "Millette"
+    ],
+    "defendants": [
+      "Google"
+    ],
+    "court": "CD California",
+    "judge": "Judge Davila",
+    "status": "Vol. Dismissed",
+    "summary": "Voluntarily dismissed.",
+    "links": []
+  },
+  {
+    "id": "millette-v-nvidia-cdcal",
+    "name": "Millette v. NVIDIA",
+    "plaintiffs": [
+      "Millette"
+    ],
+    "defendants": [
+      "NVIDIA"
+    ],
+    "court": "CD California",
+    "judge": "Judge Davila",
+    "status": "Vol. Dismissed",
+    "summary": "Voluntarily dismissed.",
+    "links": []
+  },
+  {
+    "id": "brave-v-newscorp",
+    "name": "Brave Software v. News Corp",
+    "plaintiffs": [
+      "Brave Software"
+    ],
+    "defendants": [
+      "News Corp"
+    ],
+    "court": "ND California",
+    "judge": "Judge Breyer",
+    "status": "Vol. Dismissed",
+    "summary": "Voluntarily dismissed.",
+    "links": []
+  },
+  {
+    "id": "alter-v-openai",
+    "name": "Alter v. OpenAI",
+    "plaintiffs": [
+      "Alter",
+      "Others"
+    ],
+    "defendants": [
+      "OpenAI"
+    ],
+    "court": "SDNY",
+    "judge": "Judge Stein",
+    "status": "Active",
+    "summary": "Authors suing OpenAI.",
+    "links": []
+  },
+  {
+    "id": "basbanes-v-openai",
+    "name": "Basbanes v. OpenAI",
+    "plaintiffs": [
+      "Basbanes",
+      "Others"
+    ],
+    "defendants": [
+      "OpenAI"
+    ],
+    "court": "SDNY",
+    "judge": "Judge Stein",
+    "status": "Active",
+    "summary": "Authors suing OpenAI.",
+    "links": []
+  },
+  {
+    "id": "huckabee-v-meta",
+    "name": "Huckabee v. Meta",
+    "plaintiffs": [
+      "Huckabee",
+      "Others"
+    ],
+    "defendants": [
+      "Meta"
+    ],
+    "court": "ND California",
+    "judge": "Judge Chhabria",
+    "status": "Active",
+    "summary": "Consolidated with Kadrey v. Meta.",
+    "links": []
+  },
+  {
+    "id": "farnsworth-v-meta",
+    "name": "Farnsworth v. Meta",
+    "plaintiffs": [
+      "Farnsworth"
+    ],
+    "defendants": [
+      "Meta"
+    ],
+    "court": "ND California",
+    "judge": "Judge Chhabria",
+    "status": "Active",
+    "summary": "Consolidated with Kadrey v. Meta.",
+    "links": []
+  }
+]
