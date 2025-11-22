@@ -17,6 +17,19 @@ const courtCoordinates = {
     "Appeal 3d Cir.": [-75.1652, 39.9526], // Philadelphia
 };
 
+export const stateMapping = {
+    "ND California": "California",
+    "CD California": "California",
+    "SDNY": "New York",
+    "D. Mass.": "Massachusetts",
+    "D. Col.": "Colorado",
+    "ND Illinois": "Illinois",
+    "Delaware": "Delaware",
+    "Appeal 9th Cir.": "California",
+    "Appeal 2d Cir.": "New York",
+    "Appeal 3d Cir.": "Pennsylvania",
+};
+
 const CaseMap = ({ cases, selectedId, onSelect }) => {
     // Group cases by court to size markers
     const casesByCourt = cases.reduce((acc, c) => {
@@ -57,25 +70,63 @@ const CaseMap = ({ cases, selectedId, onSelect }) => {
 
                     return (
                         <Marker key={court} coordinates={coords}>
-                            <circle
-                                r={size}
-                                fill={isSelected ? "#6366f1" : "rgba(99, 102, 241, 0.5)"}
-                                stroke="#fff"
-                                strokeWidth={2}
-                                className="cursor-pointer transition-all duration-300 hover:fill-indigo-500 hover:opacity-100"
+                            <g
+                                className="map-marker-effect cursor-pointer group"
                                 onClick={() => {
                                     if (courtCases.length > 0) {
                                         onSelect(courtCases[0].id);
                                     }
                                 }}
-                            />
-                            <text
-                                textAnchor="middle"
-                                y={-size - 5}
-                                style={{ fontFamily: "system-ui", fill: "#94a3b8", fontSize: "10px", fontWeight: "bold" }}
                             >
-                                {courtCases.length}
-                            </text>
+                                {/* Pulse Ring (always visible but subtle, intense on hover/select) */}
+                                <circle
+                                    r={size * 1.5}
+                                    fill="none"
+                                    stroke="#FFE81F"
+                                    strokeWidth={1}
+                                    opacity={isSelected ? 0.8 : 0}
+                                    className={`targeting-ring ${isSelected ? 'opacity-100' : 'group-hover:opacity-60'}`}
+                                />
+
+                                {/* Targeting Reticle (Rotating) */}
+                                <g className={`targeting-reticle ${isSelected ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} transition-opacity duration-300`}>
+                                    <circle r={size + 5} fill="none" stroke="#4BD5EE" strokeWidth={1} strokeDasharray="4 4" />
+                                    <line x1={-size - 8} y1={0} x2={-size - 2} y2={0} stroke="#4BD5EE" strokeWidth={2} />
+                                    <line x1={size + 2} y1={0} x2={size + 8} y2={0} stroke="#4BD5EE" strokeWidth={2} />
+                                    <line x1={0} y1={-size - 8} x2={0} y2={-size - 2} stroke="#4BD5EE" strokeWidth={2} />
+                                    <line x1={0} y1={size + 2} x2={0} y2={size + 8} stroke="#4BD5EE" strokeWidth={2} />
+                                </g>
+
+                                {/* Main Marker Circle */}
+                                <circle
+                                    r={size}
+                                    fill={isSelected ? "#FFE81F" : "rgba(255, 232, 31, 0.3)"}
+                                    stroke="#FFE81F"
+                                    strokeWidth={2}
+                                    className="transition-all duration-300 group-hover:fill-[#FFE81F] group-hover:opacity-100"
+                                    style={{ filter: isSelected ? 'drop-shadow(0 0 10px #FFE81F)' : 'none' }}
+                                />
+
+                                {/* Inner Dot */}
+                                <circle r={3} fill={isSelected ? "#000" : "#FFE81F"} />
+
+                                {/* Label */}
+                                <text
+                                    textAnchor="middle"
+                                    y={-size - 10}
+                                    style={{
+                                        fontFamily: "'Pathway Gothic One', sans-serif",
+                                        fill: "#FFE81F",
+                                        fontSize: "14px",
+                                        fontWeight: "bold",
+                                        textShadow: "0 0 5px black",
+                                        pointerEvents: "none"
+                                    }}
+                                    className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                >
+                                    {court} ({courtCases.length})
+                                </text>
+                            </g>
                         </Marker>
                     );
                 })}

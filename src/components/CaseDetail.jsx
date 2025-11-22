@@ -1,64 +1,117 @@
 import React from 'react';
-import { ExternalLink, Calendar, Gavel, Users, FileText } from 'lucide-react';
+import { X, ExternalLink, Calendar, MapPin, Gavel, FileText, Scale, Users } from 'lucide-react';
 
 const CaseDetail = ({ caseData }) => {
     if (!caseData) return null;
 
     return (
-        <div className="h-full overflow-y-auto p-8 scrollbar-thin scrollbar-thumb-slate-800">
+        <div className="h-full overflow-y-auto p-8 scrollbar-thin scrollbar-thumb-[#FFE81F] scrollbar-track-black">
             <div className="max-w-3xl mx-auto space-y-8">
                 {/* Header */}
-                <div className="space-y-4 border-b border-slate-800 pb-6">
+                <div className="space-y-4 border-b border-[#FFE81F]/30 pb-6">
                     <div className="flex items-start justify-between gap-4">
-                        <h2 className="text-3xl font-bold text-white leading-tight">
+                        <h2 className="text-3xl font-bold text-[#FFE81F] leading-tight tracking-wider uppercase" style={{ textShadow: '0 0 10px rgba(255, 232, 31, 0.3)' }}>
                             {caseData.name}
                         </h2>
                         {caseData.status === 'Settled' && (
-                            <span className="px-3 py-1 rounded-full text-sm font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 whitespace-nowrap">
+                            <span className="px-3 py-1 rounded-full text-sm font-bold bg-green-900/30 text-green-400 border border-green-500/30 whitespace-nowrap uppercase tracking-wider">
                                 SETTLED
                             </span>
                         )}
                         {(caseData.status === 'Dismissed' || caseData.status === 'Vol. Dismissed') && (
-                            <span className="px-3 py-1 rounded-full text-sm font-bold bg-slate-500/20 text-slate-400 border border-slate-500/30 whitespace-nowrap">
+                            <span className="px-3 py-1 rounded-full text-sm font-bold bg-red-900/30 text-red-400 border border-red-500/30 whitespace-nowrap uppercase tracking-wider">
                                 DISMISSED
                             </span>
                         )}
                     </div>
 
-                    <div className="flex flex-wrap gap-4 text-sm text-slate-400">
-                        <div className="flex items-center gap-2 bg-slate-950/50 px-3 py-1.5 rounded-lg border border-slate-800">
-                            <Gavel className="w-4 h-4 text-indigo-400" />
+                    <div className="flex flex-wrap gap-4 text-sm text-[#FFE81F]/70">
+                        <div className="flex items-center gap-2 bg-black/60 px-3 py-1.5 rounded-lg border border-[#FFE81F]/30">
+                            <Gavel className="w-4 h-4 text-[#FFE81F]" />
                             <span>{caseData.court}</span>
                         </div>
-                        <div className="flex items-center gap-2 bg-slate-950/50 px-3 py-1.5 rounded-lg border border-slate-800">
-                            <UserIcon className="w-4 h-4 text-indigo-400" />
-                            <span>{caseData.judge}</span>
-                        </div>
+                        {caseData.country !== 'CN' && (
+                            <div className="flex items-center gap-2 bg-black/60 px-3 py-1.5 rounded-lg border border-[#FFE81F]/30">
+                                <UserIcon className="w-4 h-4 text-[#FFE81F]" />
+                                <span>{caseData.judge}</span>
+                            </div>
+                        )}
+                        {caseData.case_number && (
+                            <div className="flex items-center gap-2 bg-black/60 px-3 py-1.5 rounded-lg border border-[#FFE81F]/30">
+                                <FileText className="w-4 h-4 text-[#FFE81F]" />
+                                <span className="font-mono">{caseData.case_number}</span>
+                            </div>
+                        )}
                     </div>
                 </div>
 
+                {/* Official Case Record (from Case MCP) */}
+                {caseData.pkulaw_case_url && (
+                    <div className="bg-indigo-950/30 p-4 rounded-xl border border-indigo-500/30 space-y-2">
+                        <h3 className="text-lg font-semibold text-indigo-300 flex items-center gap-2">
+                            <Scale className="w-5 h-5" />
+                            Official Case Record (via PKUlaw Case MCP)
+                        </h3>
+                        <p className="text-slate-200 font-medium">{caseData.official_title}</p>
+                        <a
+                            href={caseData.pkulaw_case_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm text-indigo-400 hover:text-indigo-300 flex items-center gap-1 inline-flex"
+                        >
+                            View Full Case Record on PKUlaw <ExternalLink className="w-3 h-3" />
+                        </a>
+                    </div>
+                )}
+
                 {/* Summary */}
                 <div className="space-y-3">
-                    <h3 className="text-lg font-semibold text-indigo-300 flex items-center gap-2">
+                    <h3 className="text-lg font-semibold text-[#FFE81F] flex items-center gap-2 uppercase tracking-wide">
                         <FileText className="w-5 h-5" />
                         Case Summary
                     </h3>
-                    <p className="text-slate-300 leading-relaxed bg-slate-950/30 p-4 rounded-xl border border-slate-800/50">
+                    <p className="text-[#FFE81F]/90 leading-relaxed bg-black/40 p-4 rounded-xl border border-[#FFE81F]/30 font-light">
                         {caseData.summary || "No summary available."}
                     </p>
                 </div>
 
+                {/* Relevant Laws (from MCP) */}
+                {caseData.relevant_laws && caseData.relevant_laws.length > 0 && (
+                    <div className="space-y-3">
+                        <h3 className="text-lg font-semibold text-indigo-300 flex items-center gap-2">
+                            <Gavel className="w-5 h-5" />
+                            Relevant Laws & Regulations (via PKUlaw MCP)
+                        </h3>
+                        <div className="grid gap-4">
+                            {caseData.relevant_laws.map((law, i) => (
+                                <div key={i} className="bg-slate-950/30 p-4 rounded-xl border border-slate-800/50 space-y-2">
+                                    <h4 className="font-medium text-slate-200">{law.title}</h4>
+                                    <p className="text-sm text-slate-400 leading-relaxed">{law.article}</p>
+                                    <a
+                                        href={law.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-xs text-indigo-400 hover:text-indigo-300 flex items-center gap-1 mt-2"
+                                    >
+                                        View on PKUlaw <ExternalLink className="w-3 h-3" />
+                                    </a>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
                 {/* Parties */}
                 <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-3">
-                        <h3 className="text-lg font-semibold text-indigo-300 flex items-center gap-2">
+                        <h3 className="text-lg font-semibold text-[#FFE81F] flex items-center gap-2 uppercase tracking-wide">
                             <Users className="w-5 h-5" />
                             Plaintiffs
                         </h3>
                         <ul className="space-y-2">
                             {caseData.plaintiffs.map((p, i) => (
-                                <li key={i} className="flex items-center gap-2 text-slate-300 bg-slate-950/30 px-3 py-2 rounded-lg border border-slate-800/50">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
+                                <li key={i} className="flex items-center gap-2 text-[#FFE81F]/80 bg-black/40 px-3 py-2 rounded-lg border border-[#FFE81F]/20">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-[#4BD5EE]" />
                                     {p}
                                 </li>
                             ))}
@@ -66,14 +119,14 @@ const CaseDetail = ({ caseData }) => {
                     </div>
 
                     <div className="space-y-3">
-                        <h3 className="text-lg font-semibold text-indigo-300 flex items-center gap-2">
+                        <h3 className="text-lg font-semibold text-[#FFE81F] flex items-center gap-2 uppercase tracking-wide">
                             <Users className="w-5 h-5" />
                             Defendants
                         </h3>
                         <ul className="space-y-2">
                             {caseData.defendants.map((d, i) => (
-                                <li key={i} className="flex items-center gap-2 text-slate-300 bg-slate-950/30 px-3 py-2 rounded-lg border border-slate-800/50">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
+                                <li key={i} className="flex items-center gap-2 text-[#FFE81F]/80 bg-black/40 px-3 py-2 rounded-lg border border-[#FFE81F]/20">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-[#FF0000]" />
                                     {d}
                                 </li>
                             ))}
@@ -114,15 +167,32 @@ const CaseDetail = ({ caseData }) => {
                             <Calendar className="w-5 h-5" />
                             Case Timeline
                         </h3>
-                        <a
-                            href={`https://www.google.com/search?q=${encodeURIComponent(caseData.name + " lawsuit update")}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-xs bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1"
-                        >
-                            Research Updates
-                            <ExternalLink className="w-3 h-3" />
-                        </a>
+                        <div className="flex gap-2">
+                            {caseData.country === 'CN' ? (
+                                <>
+                                    <a
+                                        href="https://www.pkulaw.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-xs bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1"
+                                    >
+                                        Search PKUlaw
+                                        <ExternalLink className="w-3 h-3" />
+                                    </a>
+
+                                </>
+                            ) : (
+                                <a
+                                    href={`https://www.google.com/search?q=${encodeURIComponent(caseData.name + " lawsuit update")}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-xs bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1"
+                                >
+                                    Research Updates
+                                    <ExternalLink className="w-3 h-3" />
+                                </a>
+                            )}
+                        </div>
                     </div>
 
                     <div className="relative border-l-2 border-slate-800 ml-3 space-y-6 pb-2">
@@ -147,7 +217,7 @@ const CaseDetail = ({ caseData }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

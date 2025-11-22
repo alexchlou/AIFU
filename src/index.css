@@ -3,12 +3,225 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --sw-yellow: #FFE81F;
+  --sw-black: #000000;
+  --sw-blue: #4BD5EE;
+  --sw-red: #FF0000;
 }
 
 body {
-  margin: 0;
-  background-color: #020617; /* slate-950 */
+  background-color: #000;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Pathway Gothic One', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Starfield Animation */
+.stars,
+.stars2,
+.stars3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: transparent;
+}
+
+.stars {
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, #eee, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 40px 70px, #fff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 50px 160px, #ddd, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 90px 40px, #fff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 130px 80px, #fff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 160px 120px, #ddd, rgba(0, 0, 0, 0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: zoom 100s infinite;
+  opacity: 0.5;
+}
+
+.stars2 {
+  background-image:
+    radial-gradient(2px 2px at 50px 160px, #fff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 130px 80px, #fff, rgba(0, 0, 0, 0));
+  background-repeat: repeat;
+  background-size: 300px 300px;
+  animation: zoom 150s infinite;
+  opacity: 0.4;
+}
+
+.stars3 {
+  background-image:
+    radial-gradient(3px 3px at 160px 120px, #fff, rgba(0, 0, 0, 0));
+  background-repeat: repeat;
+  background-size: 400px 400px;
+  animation: zoom 200s infinite;
+  opacity: 0.3;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sw-yellow);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e6d01c;
+}
+
+/* Utility classes for theme */
+.text-sw-yellow {
+  color: var(--sw-yellow);
+}
+
+/* Game-like Map Effects */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+    box-shadow: 0 0 0 0 rgba(255, 232, 31, 0.7);
+  }
+
+  70% {
+    transform: scale(2);
+    opacity: 0;
+    box-shadow: 0 0 0 20px rgba(255, 232, 31, 0);
+  }
+
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes hologram-flicker {
+  0% {
+    opacity: 0.9;
+  }
+
+  5% {
+    opacity: 0.8;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  15% {
+    opacity: 0.5;
+  }
+
+  20% {
+    opacity: 0.9;
+  }
+
+  50% {
+    opacity: 0.9;
+  }
+
+  55% {
+    opacity: 0.7;
+  }
+
+  60% {
+    opacity: 0.9;
+  }
+
+  95% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0.9;
+  }
+}
+
+.map-marker-effect {
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+
+.map-marker-effect:hover {
+  filter: drop-shadow(0 0 8px #FFE81F);
+}
+
+.targeting-reticle {
+  pointer-events: none;
+  animation: spin-slow 10s linear infinite;
+}
+
+.targeting-ring {
+  pointer-events: none;
+  animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.bg-sw-yellow {
+  background-color: var(--sw-yellow);
+}
+
+.border-sw-yellow {
+  border-color: var(--sw-yellow);
+}
+
+.shadow-sw-yellow {
+  shadow-color: var(--sw-yellow);
 }
 
 /* Custom Scrollbar */
@@ -22,19 +235,21 @@ body {
 }
 
 .scrollbar-thin::-webkit-scrollbar-thumb {
-  background-color: #334155; /* slate-700 */
+  background-color: #334155;
+  /* slate-700 */
   border-radius: 20px;
 }
 
 .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-  background-color: #475569; /* slate-600 */
+  background-color: #475569;
+  /* slate-600 */
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

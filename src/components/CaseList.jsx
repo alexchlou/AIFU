@@ -9,37 +9,37 @@ const CaseList = ({ cases, selectedId, onSelect }) => {
                     key={c.id}
                     onClick={() => onSelect(c.id)}
                     className={`group p-4 rounded-xl border cursor-pointer transition-all duration-200 ${selectedId === c.id
-                        ? 'bg-indigo-500/10 border-indigo-500/50 shadow-lg shadow-indigo-500/10'
-                        : 'bg-slate-950/30 border-slate-800/50 hover:bg-slate-800/50 hover:border-slate-700'
+                        ? 'bg-[#FFE81F]/10 border-[#FFE81F] shadow-[0_0_15px_rgba(255,232,31,0.2)]'
+                        : 'bg-black/40 border-[#FFE81F]/20 hover:bg-[#FFE81F]/5 hover:border-[#FFE81F]/50'
                         }`}
                 >
                     <div className="flex justify-between items-start mb-2">
-                        <h3 className={`font-semibold text-sm leading-tight ${selectedId === c.id ? 'text-indigo-300' : 'text-slate-200 group-hover:text-white'
+                        <h3 className={`font-semibold text-sm leading-tight tracking-wide ${selectedId === c.id ? 'text-[#FFE81F]' : 'text-[#FFE81F]/80 group-hover:text-[#FFE81F]'
                             }`}>
                             {c.name}
                         </h3>
                         {c.status === 'Settled' && (
-                            <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                            <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-green-900/30 text-green-400 border border-green-500/30 uppercase tracking-wider">
                                 SETTLED
                             </span>
                         )}
                         {(c.status === 'Dismissed' || c.status === 'Vol. Dismissed') && (
-                            <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-slate-500/20 text-slate-400 border border-slate-500/30">
+                            <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-red-900/30 text-red-400 border border-red-500/30 uppercase tracking-wider">
                                 DISMISSED
                             </span>
                         )}
                     </div>
 
                     <div className="space-y-1.5">
-                        <div className="flex items-center gap-2 text-xs text-slate-400">
+                        <div className="flex items-center gap-2 text-xs text-[#FFE81F]/60">
                             <Scale className="w-3 h-3" />
                             <span>{c.court}</span>
                         </div>
-                        <div className="flex items-center gap-2 text-xs text-slate-500">
+                        <div className="flex items-center gap-2 text-xs text-[#FFE81F]/50">
                             <User className="w-3 h-3" />
                             <span className="truncate">{c.judge}</span>
                         </div>
-                        <div className="flex items-center gap-2 text-xs text-slate-500">
+                        <div className="flex items-center gap-2 text-xs text-[#FFE81F]/50">
                             <Users className="w-3 h-3" />
                             <span className="truncate">vs. {c.defendants.join(', ')}</span>
                         </div>
